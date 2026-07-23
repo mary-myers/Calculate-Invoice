@@ -50,6 +50,8 @@ export default class Menu {
                 console.log(segment);
             }
 
+            segment.push(" ");
+
             //console.log(segment);
 
             let temp = "";
