@@ -43,14 +43,16 @@ export default class Menu {
 
         let sum = 0;
 
+        console.log(this.text.length);
+
         for(let i = 0; i < this.text.length; i++){
             const segment = this.text[i];
 
-            if(i==1){
+            if(i==this.text.length){
                 console.log(segment);
             }
 
-            segment.push(" ");
+            //segment.push(" ");
 
             //console.log(segment);
 
@@ -76,10 +78,16 @@ export default class Menu {
                 }
             }
 
-        }
+            if(temp != ""){
+                sum += parseFloat(temp);
+                temp = "";
+            }
+    
+            this.sum = sum;
+            console.log(sum);
 
-        this.sum = sum;
-        console.log(sum);
+
+        }
 
     }
 
